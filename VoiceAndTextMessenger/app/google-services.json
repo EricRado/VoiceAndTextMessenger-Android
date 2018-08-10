@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "144580727427",
+    "firebase_url": "https://voiceandtextmessenger.firebaseio.com",
+    "project_id": "voiceandtextmessenger",
+    "storage_bucket": "voiceandtextmessenger.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:144580727427:android:a037c7f40c593eeb",
+        "android_client_info": {
+          "package_name": "com.developer.eric.voiceandtextmessenger"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "144580727427-i2l88nmeh492v2p53el982bfeboesjb4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCIQ0rcoQ0lUmOEgUTZlNGvM5TObxRVXZM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
