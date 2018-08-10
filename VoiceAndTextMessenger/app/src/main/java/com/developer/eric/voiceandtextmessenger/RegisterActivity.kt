@@ -12,7 +12,7 @@ import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.storage.FirebaseStorage
-import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_register.*
 import java.util.*
 
 class RegisterActivity : AppCompatActivity() {
@@ -22,7 +22,7 @@ class RegisterActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_register)
 
         registerButton.setOnClickListener {
             performRegister()
@@ -55,8 +55,11 @@ class RegisterActivity : AppCompatActivity() {
 
             val bitmap = MediaStore.Images.Media.getBitmap(contentResolver, selectedPhotoUri)
 
-            val bitmapDrawable = BitmapDrawable(bitmap)
-            selectPhotoButtonRegister.setBackgroundDrawable(bitmapDrawable)
+            selectPhotoImageViewRegister.setImageBitmap(bitmap)
+            selectPhotoButtonRegister.alpha = 0f
+
+            //val bitmapDrawable = BitmapDrawable(bitmap)
+            //selectPhotoButtonRegister.setBackgroundDrawable(bitmapDrawable)
         }
     }
 
