@@ -1,5 +1,6 @@
 package com.developer.eric.voiceandtextmessenger
 
+import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.util.Log
@@ -19,6 +20,18 @@ class LoginActivity: AppCompatActivity() {
             Log.d("Login", "Attempt login with email/pw: $email")
 
             FirebaseAuth.getInstance().signInWithEmailAndPassword(email, password)
+                .addOnSuccessListener {
+                    val intent = Intent(this, LatestMessagesActivity::class.java)
+
+                    // when back button is pressed avoids sending you back to register activity
+                    // because the stack is cleared
+                    intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK.or(Intent.FLAG_ACTIVITY_NEW_TASK)
+                    startActivity(intent)
+                }
+
+                .addOnFailureListener {
+                    Log.d("LoginActivity", it.toString())
+                }
         }
 
         backToRegistrationTextView.setOnClickListener {
