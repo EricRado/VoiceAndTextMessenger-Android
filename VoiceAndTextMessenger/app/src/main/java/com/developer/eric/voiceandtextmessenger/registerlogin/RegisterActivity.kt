@@ -1,17 +1,20 @@
-package com.developer.eric.voiceandtextmessenger
+package com.developer.eric.voiceandtextmessenger.registerlogin
 
 import android.app.Activity
 import android.content.Intent
-import android.graphics.drawable.BitmapDrawable
 import android.net.Uri
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Parcelable
 import android.provider.MediaStore
 import android.util.Log
 import android.widget.Toast
+import com.developer.eric.voiceandtextmessenger.R
+import com.developer.eric.voiceandtextmessenger.messages.LatestMessagesActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.storage.FirebaseStorage
+import kotlinx.android.parcel.Parcelize
 import kotlinx.android.synthetic.main.activity_register.*
 import java.util.*
 
@@ -137,6 +140,7 @@ class RegisterActivity : AppCompatActivity() {
     }
 }
 
-class User(val uid: String, val username: String, val profileImageUrl: String) {
+@Parcelize
+class User(val uid: String, val username: String, val profileImageUrl: String) : Parcelable {
     constructor() : this("", "", "")
 }

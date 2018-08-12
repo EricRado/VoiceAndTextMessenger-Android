@@ -1,11 +1,12 @@
-package com.developer.eric.voiceandtextmessenger
+package com.developer.eric.voiceandtextmessenger.messages
 
 import android.content.Intent
 import android.os.Bundle
-import android.os.PersistableBundle
 import android.support.v7.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
+import com.developer.eric.voiceandtextmessenger.R
+import com.developer.eric.voiceandtextmessenger.registerlogin.RegisterActivity
 import com.google.firebase.auth.FirebaseAuth
 
 class LatestMessagesActivity : AppCompatActivity() {

@@ -1,9 +1,11 @@
-package com.developer.eric.voiceandtextmessenger
+package com.developer.eric.voiceandtextmessenger.registerlogin
 
 import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.util.Log
+import com.developer.eric.voiceandtextmessenger.R
+import com.developer.eric.voiceandtextmessenger.messages.LatestMessagesActivity
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_login.*
 
