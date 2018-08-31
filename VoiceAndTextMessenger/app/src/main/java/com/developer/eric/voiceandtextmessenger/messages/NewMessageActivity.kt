@@ -5,7 +5,7 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import com.developer.eric.voiceandtextmessenger.R
-import com.developer.eric.voiceandtextmessenger.registerlogin.User
+import com.developer.eric.voiceandtextmessenger.models.User
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
@@ -74,6 +74,7 @@ class UserItem(val user: User): Item<ViewHolder>() {
     }
 
     override fun bind(viewHolder: ViewHolder, position: Int) {
+        Log.d("New Message Activity", "Binding User Item")
         viewHolder.itemView.usernameTextViewNewMessage.text = user.username
 
         Picasso.get().load(user.profileImageUrl)
